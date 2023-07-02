@@ -1,0 +1,16 @@
+def find_nth_largest(numbers, n):
+
+    sorted_numbers = sorted(numbers, reverse=True)
+    
+    if n <= len(sorted_numbers):
+        return sorted_numbers[n-1]
+    else:
+        return None
+        
+input_numbers = [5, 9, 2, 12, 6, 3]
+n = int(input("Enter the value of N: "))
+result = find_nth_largest(input_numbers, n)
+if result is not None:
+    print(f"The {n}th largest number is: {result}")
+else:
+    print("Invalid input for N.")
